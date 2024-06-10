@@ -457,7 +457,7 @@ def fuzzy_search(input_keyword, page):
             "multi_match": {
                 "query": input_keyword,
                 "fields": ["fullName", "search_text", "br_nm"],
-                
+                "minimum_should_match": "80%",
                 "fuzziness" : 2
             }
         },
